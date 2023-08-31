@@ -6,7 +6,7 @@ export default function TextForm(props) {
       <div className="mb-3">
         <h1>{props.heading}</h1>
 
-        <label for="myBox" className="form-label">
+        <label htmlFor="myBox" className="form-label">
            TextArea
         </label>
         <textarea
@@ -20,7 +20,11 @@ export default function TextForm(props) {
     </div>
   );
 }
-Texts.PropTypes =
-{
- headings : PropTypes.string.isRequired
-}
+// Texts.propTypesTypes =
+// {
+//  heading : propTypes.string.isRequired
+// }
+// Texts.defaultProps =
+// {
+//   heading : 'Set heading here'
+// }
