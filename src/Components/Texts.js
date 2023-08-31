@@ -20,11 +20,3 @@ export default function TextForm(props) {
     </div>
   );
 }
-// Texts.propTypesTypes =
-// {
-//  heading : propTypes.string.isRequired
-// }
-// Texts.defaultProps =
-// {
-//   heading : 'Set heading here'
-// }
