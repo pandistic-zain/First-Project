@@ -14,6 +14,7 @@ export default function TextForm(props) {
 
 
     return (
+      <>
     <div>
       <div className="mb-3">
         <h1>{props.heading}</h1>
@@ -29,8 +30,9 @@ export default function TextForm(props) {
           rows="8"
         ></textarea>
         
-        <button className="btn Primary"onClick={handleUpClick}> Convert to UpperCase</button>
+        <button className="btn btn-Primary"onClick={handleUpClick}> Convert to UpperCase</button>
       </div>
     </div>
+    </>
   );
 }
