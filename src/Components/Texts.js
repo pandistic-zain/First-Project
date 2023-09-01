@@ -21,9 +21,9 @@ export default function TextForm(props) {
     return (
       <>
     <div className="container">
-      <div className="mb-3">
-        <h1>{props.heading}</h1>
-
+    <h1>{props.heading}</h1>
+  
+    <div className="mb-3">
         <label htmlFor="myBox" className="form-label">
            TextArea
         </label>
@@ -34,10 +34,20 @@ export default function TextForm(props) {
           id="myBox"
           rows="8"
         ></textarea>
+        </div>
         
         <button className="btn btn-Primary"onClick={handleUpClick}> Convert to UpperCase</button>
         <button className="btn btn-Primary"onClick={handleLoClick}> Convert to lowerCase</button>
-      </div>
+    
+    </div>
+
+    <div className="container my-3">
+    <h1>Your text Summary</h1>
+    <p>{Text.split("").length} Words And {Text.length} Characters</p>
+    <p>Preview of Text</p>
+    <p>{Text}</p>
+    <p>{0.008*Text.split("").length} Minutes to read.</p>
+
     </div>
     </>
   );
