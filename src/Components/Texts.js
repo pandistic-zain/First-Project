@@ -36,14 +36,14 @@ export default function TextForm(props) {
         ></textarea>
         </div>
         
-        <button className="btn btn-info mx-2"onClick={handleUpClick}> Convert to UpperCase</button>
-        <button className="btn btn-info"onClick={handleLoClick}> Convert to lowerCase</button>
+        <button className="btn btn-outline-info mx-2"onClick={handleUpClick}type="submit"> Convert to UpperCase</button>
+        <button className="btn btn-outline-info"onClick={handleLoClick}type="submit"> Convert to lowerCase</button>
     
     </div>
 
     <div className="container my-3">
     <h1>Your text Summary</h1>
-    <p>{Text.split("").length} Words And {Text.length} Characters</p>
+    <p>{Text.split(" ").length} Words And {Text.length} Characters</p>
     <h3>Preview of Text</h3>
     <p>{Text}</p>
     <p>{0.008*Text.split("").length} Minutes to read.</p>
