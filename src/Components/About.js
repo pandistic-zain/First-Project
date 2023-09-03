@@ -6,7 +6,7 @@ export default function About() {
         <h1>
             About
         </h1>
-      <div className="accordion" id="accordionExample">
+      <div className="accordion" id="about-me">
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button
