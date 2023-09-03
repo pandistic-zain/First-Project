@@ -12,6 +12,11 @@ export default function TextForm(props) {
     let newText = Text.toLowerCase();
     setText(newText);
   }
+  const handleClearClick = ()=>{
+    console.log("Submit Clear Button Was Clicked" + Text)
+    let newText = ("");
+    setText(newText);
+  }
 
 
   const handleOnChange = (event)=>{
@@ -40,6 +45,7 @@ export default function TextForm(props) {
         
         <button className="btn btn-outline-info mx-2"onClick={handleUpClick}type="submit"> Convert to UpperCase</button>
         <button className="btn btn-outline-info"onClick={handleLoClick}type="submit"> Convert to lowerCase</button>
+        <button className="btn btn-outline-danger"onClick={handleClearClick}type="submit"> Clear Text</button>
         
     </div>
 
