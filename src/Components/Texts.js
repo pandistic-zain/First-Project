@@ -44,7 +44,7 @@ export default function TextForm(props) {
         </div>
         
         <button className="btn btn-outline-info mx-2"onClick={handleUpClick}type="submit"> Convert to UpperCase</button>
-        <button className="btn btn-outline-info"onClick={handleLoClick}type="submit"> Convert to lowerCase</button>
+        <button className="btn btn-outline-info mx-2"onClick={handleLoClick}type="submit"> Convert to lowerCase</button>
         <button className="btn btn-outline-danger"onClick={handleClearClick}type="submit"> Clear Text</button>
         
     </div>
