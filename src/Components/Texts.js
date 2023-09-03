@@ -17,6 +17,13 @@ export default function TextForm(props) {
     let newText = ("");
     setText(newText);
   }
+  const handleCopyClick = ()=>{
+    console.log("Submit Copy Button Was Clicked" + Text)
+    let newText = document.getElementsByClassName("form-control");
+    newText = getSelection();
+  
+    navigator.clipboard.writeText(newText);
+  }
 
 
   const handleOnChange = (event)=>{
@@ -45,7 +52,8 @@ export default function TextForm(props) {
         
         <button className="btn btn-outline-info mx-2"onClick={handleUpClick}type="submit"> Convert to UpperCase</button>
         <button className="btn btn-outline-info mx-2"onClick={handleLoClick}type="submit"> Convert to lowerCase</button>
-        <button className="btn btn-outline-danger"onClick={handleClearClick}type="submit"> Clear Text</button>
+        <button className="btn btn-outline-danger mx-2"onClick={handleClearClick}type="submit"> Clear Text</button>
+        <button className="btn btn-outline-info mx-2"onClick={handleCopyClick}type="submit"> Copy Text</button>
         
     </div>
 
