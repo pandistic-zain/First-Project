@@ -12,13 +12,7 @@ export default function TextForm(props) {
     let newText = Text.toLowerCase();
     setText(newText);
   }
-  const handleUndoClick = ()=>{
-    console.log("Submit Undo Button Was Clicked" + Text)
-  let currentState = Text;
-  undoStack.push(currentState);
-  let previousState = undoStack[undoStack.length - 2];
-  setText(previousState);
-}
+
 
   const handleOnChange = (event)=>{
     console.log("OnChange")
@@ -46,8 +40,7 @@ export default function TextForm(props) {
         
         <button className="btn btn-outline-info mx-2"onClick={handleUpClick}type="submit"> Convert to UpperCase</button>
         <button className="btn btn-outline-info"onClick={handleLoClick}type="submit"> Convert to lowerCase</button>
-        <button className="btn btn-outline-info"onClick={handleUndoClick}type="submit"> Undo To Previous State</button>
-    
+        
     </div>
 
     <div className="container my-3">
