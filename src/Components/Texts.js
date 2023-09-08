@@ -29,13 +29,6 @@ export default function TextForm(props) {
     newText.select();
     navigator.clipboard.writeText(newText.value);
   };
-  const [weight, setStyle] = useState({ fontWeight:"normal" });
-  const handleBoldTextClick = () => {
-    if (weight.fontWeight === "normal") 
-    setStyle({ fontWeight: "bold" });
-    else if (weight.fontWeight === "bold") 
-    setStyle({ fontWeight: "normal" });
-  };
 
   const handleOnChange = (event) => {
     console.log("OnChange");
@@ -44,7 +37,7 @@ export default function TextForm(props) {
 
   return (
     <>
-      <div className="container">
+      <div className="container"  style={{color : props.mode === "light" ? "black" : "white"}}>
         <h1>{props.heading}</h1>
 
         <div className="mb-3">
@@ -55,6 +48,8 @@ export default function TextForm(props) {
             className="form-control"
             value={Text}
             onChange={handleOnChange}
+            style={{backgroundColor : props.mode === "light" ? "white" : "#0B1A4F",
+            color : props.mode === "light" ? "black" : "white"}}
             id="myBox"
             rows="8"
           ></textarea>
@@ -99,22 +94,15 @@ export default function TextForm(props) {
         >
           Extra Spaces
         </button>
-        <button
-          className="btn btn-outline-info mx-2"
-          onClick={handleBoldTextClick}
-          type="submit"
-        >
-          Bold Text
-        </button>
       </div>
 
-      <div className="container my-3">
-        <h1>Your text Summary</h1>
+      <div className="container my-3"  style={{color : props.mode === "light" ? "black" : "white"}}>
+        <h1 >Your text Summary</h1>
         <p>
           {Text.split(" ").length} Words And {Text.length} Characters
         </p>
         <h3>Preview of Text</h3>
-        <p>{Text}</p>
+        <p>{Text.length > 0 ? Text:"Enter Some Text Above To Preview That Text Here.....!"}</p>
         <p>{0.008 * Text.split(" ").length} Minutes to read.</p>
       </div>
     </>
