@@ -35,7 +35,7 @@ function App() {
 }
   return (
     <>
-      <Navbar title="Fitness Zone" mode={mode} ToggleMode={ToggleMode} />
+      <Navbar title="Text-Zoon" mode={mode} ToggleMode={ToggleMode} />
       <Alert alert={alert}/>
       <div className = "container my-3"> 
       <TextForm showAlert={showAlert} heading="Enter Text to Analyse" mode={mode}/>
