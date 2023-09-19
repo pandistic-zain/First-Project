@@ -42,6 +42,7 @@ export default function About(props){
               though the transition does limit overflow.
             </div>
           </div>
+          
         </div>
         <div className="accordion-item">
           <h2 className="accordion-header">
