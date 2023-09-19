@@ -6,21 +6,25 @@ export default function TextForm(props) {
     console.log("Submit Up Button Was Clicked" + Text);
     let newText = Text.toUpperCase();
     setText(newText);
+    props.showAlert("Converted to UpperCase!", "success");
   };
   const handleLoClick = () => {
     console.log("Submit Low Button Was Clicked" + Text);
     let newText = Text.toLowerCase();
     setText(newText);
+    props.showAlert("Converted to LowerCase!", "success");
   };
   const handleClearClick = () => {
     console.log("Submit Clear Button Was Clicked" + Text);
     let newText = "";
     setText(newText);
+    props.showAlert("Text Clear!", "danger");
   };
   const handleESpacesClick = () => {
     console.log("Submit E-Space Button Was Clicked" + Text);
     let newText = Text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.showAlert("ExtraSpaces Are Cleared!", "success");
   };
 
   const handleCopyClick = () => {
@@ -28,6 +32,7 @@ export default function TextForm(props) {
     let newText = document.getElementById("myBox");
     newText.select();
     navigator.clipboard.writeText(newText.value);
+    props.showAlert("Text is Copied To the ClipBoard!", "success");
   };
 
   const handleOnChange = (event) => {
@@ -41,9 +46,6 @@ export default function TextForm(props) {
         <h1>{props.heading}</h1>
 
         <div className="mb-3">
-          <label htmlFor="myBox" className="form-label">
-            TextArea
-          </label>
           <textarea
             className="form-control"
             value={Text}

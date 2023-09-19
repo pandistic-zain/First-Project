@@ -7,15 +7,17 @@ import React, { useState } from 'react'
 
 function App() {
   const[mode, setMode] = useState('light');
-  const[alert,setAlert] = useState('null');
+  const[alert,setAlert] = useState(null);
   const showAlert=(message,type)=>{
     setAlert(
       {
         msg :message,
         type: type
-      }
-    )
+      })
+    setTimeout(()=>{
+      setAlert(null);
 
+      },2000);
   }
   const ToggleMode=()=>{
     if(mode==='dark')
@@ -36,7 +38,7 @@ function App() {
       <Navbar title="Fitness Zone" mode={mode} ToggleMode={ToggleMode} />
       <Alert alert={alert}/>
       <div className = "container my-3"> 
-      <TextForm heading="Enter Text to Analyse" mode={mode}/>
+      <TextForm showAlert={showAlert} heading="Enter Text to Analyse" mode={mode}/>
      <About mode={mode} ToggleMode={ToggleMode}/>
       </div>
       
