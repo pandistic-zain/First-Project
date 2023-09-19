@@ -25,12 +25,14 @@ function App() {
     setMode( 'light'); 
     document.body.style.backgroundColor='white';
     showAlert("The Light Mode Has been Enabled", "success");
+    document.title='TextZoon Light-Mode';
     }
     else
     {
     setMode( 'dark'); 
     document.body.style.backgroundColor='#0B1A4F';
     showAlert("The Dark Mode Has been Enabled", "success");
+    document.title='TextZoon Dark-Mode';
     }
 }
   return (
