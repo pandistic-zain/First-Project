@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 export default function TextForm(props) {
   const [Text, setText] = useState("Enter Text Here");
   const handleUpClick = () => {
